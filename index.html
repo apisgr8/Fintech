@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zenith Invest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #0B0F14;
+        color: #E6EDF3;
+      }
+      .glow-card {
+        box-shadow: 0 0 15px rgba(0, 229, 255, 0.1), 0 0 5px rgba(0, 229, 255, 0.05);
+      }
+      .glow-accent {
+        filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.7));
+      }
+      .glow-success {
+        filter: drop-shadow(0 0 8px rgba(0, 208, 132, 0.7));
+      }
+       .glow-error {
+        filter: drop-shadow(0 0 8px rgba(255, 82, 82, 0.7));
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #1a202c;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #00E5FF;
+        border-radius: 3px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #00b8d4;
+      }
+
+      /* Animations for new components */
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 0.7;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 1;
+        }
+      }
+      .animate-pulse-aura {
+        animation: pulse 2s infinite ease-in-out;
+      }
+
+      @keyframes ring-pulse {
+        0% {
+          stroke-opacity: 0.5;
+          transform: scale(0.95);
+        }
+        70% {
+          stroke-opacity: 0.1;
+          transform: scale(1.2);
+        }
+        100% {
+           stroke-opacity: 0;
+           transform: scale(1.2);
+        }
+      }
+      .animate-ring-pulse {
+        animation: ring-pulse 2.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        transform-origin: center;
+      }
+
+      @keyframes shockwave {
+        0% {
+          transform: scale(1);
+          opacity: 0.75;
+        }
+        100% {
+          transform: scale(3.5);
+          opacity: 0;
+        }
+      }
+      .animate-shockwave {
+          animation: shockwave 1s ease-out forwards;
+          transform-origin: center;
+      }
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.16.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.1.2",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
